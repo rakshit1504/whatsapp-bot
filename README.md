@@ -75,7 +75,7 @@ This was built primarily as an educational experiment to learn how to work with 
 
 ## 🧑‍💻 Author
 
-Built by [Rakshit Bansal] — learning and exploring how APIs and messaging platforms connect.  
+Built by **Rakshit Bansal** — learning and exploring how APIs and messaging platforms connect.  
 Feel free to fork or suggest improvements!
 
 
