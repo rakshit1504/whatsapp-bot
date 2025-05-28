@@ -37,5 +37,45 @@ After each interaction, the bot responds with a polite thank-you message and ack
 
 ---
 
+## 🗂️ File Structure (on Glitch)
+
+├── server.js # Express server handling incoming webhook calls
+├── .env # Stores access tokens and verification secrets
+├── package.json # Project metadata and dependencies
+└── glitch.json # Glitch project config (optional)
+
+
+## 🚀 Getting Started
+
+To test this bot:
+
+1. Set up your **Meta Developer Account** and connect a phone number.
+2. Create your WhatsApp Business App and configure webhooks.
+3. Deploy your webhook endpoint on Glitch (or any Node.js host).
+4. Replace your access token and verification token in `.env`.
+5. Create required message templates and get them approved.
+6. Trigger messages via `POST` calls or from WhatsApp Sandbox UI.
+
+---
+
+## 🌱 Future Improvements
+
+- Add database logging to store user responses
+- Handle fallbacks and incorrect inputs more gracefully
+- Expand conversation flow with more branches
+- Integrate with Dialogflow or a real NLP model
+
+---
+
+## ⚠️ Note
+
+This was built primarily as an educational experiment to learn how to work with WhatsApp Cloud API and webhooks. It’s not a production-grade chatbot.
+
+---
+
+## 🧑‍💻 Author
+
+Built by [Rakshit Bansal] — learning and exploring how APIs and messaging platforms connect.  
+Feel free to fork or suggest improvements!
 
 
