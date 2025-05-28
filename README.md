@@ -1,36 +1,41 @@
-# WhatsApp Platform Quick Start
+# WhatsApp Cloud API – Education Info Chatbot
 
-Welcome to your first step toward building awesome WhatsApp apps!
+This project is a simple WhatsApp chatbot that collects basic education-related information using the Meta WhatsApp Cloud API. It was built as part of an assignment to explore webhook handling, template messaging, and API integration using Meta for Developers.
 
-This project contains the code for a simple webhook you can use to get started using the WhatsApp Platform.
+---
 
-The code here mirrors what is in our [webhook set up guide](https://developers.facebook.com/docs/whatsapp/cloud-api/guides/set-up-webhooks), and may be used as the starting point for doing the ["Get Started With the WhatsApp Business Cloud API guide"](https://developers.facebook.com/docs/whatsapp/getting-started/signing-up/).
+## 📌 What It Does
 
-## Additional Resources
+The bot initiates a short conversation with the user and asks:
 
-Interested in learning more about the WhatsApp Platform?
+1. Whether the user has completed their graduation (Yes/No buttons)
+2. Based on the response:
+   - If **Yes**, it follows up by asking what degree they completed (with button options like B.Tech, B.Com, etc.).
+   - If **No**, it asks the user to manually type their highest qualification.
 
-Check out these resources:
+After each interaction, the bot responds with a polite thank-you message and acknowledges the input.
 
-- [**Webhook set up guide**](https://developers.facebook.com/docs/whatsapp/getting-started/signing-up/#configure-webhooks): The walkthrough for the code in this project.
+---
 
-- [**Quick start tutorial**](https://developers.facebook.com/docs/whatsapp/getting-started/signing-up/): Build your first app by remixing this project and following our quick start tutorial.
+## 🔧 How It Works
 
-- [**WhatsApp Business Platform Documentation**](https://developers.facebook.com/docs/whatsapp/)
+- The bot uses **WhatsApp Cloud API** via Meta for Developers.
+- Templates are created inside the Meta Business Suite to send structured messages with quick-reply buttons.
+- A webhook endpoint (built and hosted on **Glitch**) receives and responds to messages.
+- The webhook handles:
+  - Verifying the token and endpoint handshake
+  - Listening to incoming user interactions
+  - Sending dynamic responses based on user's replies
+
+---
+
+## 💻 Tech Stack
+
+- WhatsApp Cloud API (Meta for Developers)
+- Webhooks (Node.js + Express, hosted on Glitch)
+- JSON message handling for templates and replies
+
+---
 
 
-## Environment Setup
 
-1. Create an account on Glitch to have access to all features mentioned here.
-2. Remix this project on Glitch.
-3. Click on the file `.env` on the left sidebar, and set these environment variables
-
-- `WEBHOOK_VERIFY_TOKEN`: You can use any string and use the same when setting up the webhook in your app in the following steps.
-- `GRAPH_API_TOKEN`: You can get a **Temporary access token** from the dashboard of your app on **Meta for Developers** when you click **API Setup** under the **WhatsApp** section on the left navigation pane.
-
-4. Get the new Glitch URL to use as your webhook, eg: `https://project-name.glitch.me/webhook`. You can find the base URL by clicking on **Share** on top right in Glitch, copy the **Live Site** URL, then add `/webhook` to it.
-5. Subscribe the webhook URL in the dashboard of your app on **Meta for Developers**. Click the **Configuration** menu under **WhatsApp** in the left navigation pane.
-   In the **Webhook** section, click **Edit** and paste your webhook URL from the previous step. For the **Verify token** field, use the `VERIFY_TOKEN` value in your .env file, then click **Verify and save**.
-   Under the **Webhook fields** section click **Manage** and make sure **messages** field is selected.
-6. Edit `server.js` to change the webhook logic as needed.
-7. Click on the **Logs** tab at the bottom to view server logs. The logs section also has a button to attach a debugger via Chrome devtools.
