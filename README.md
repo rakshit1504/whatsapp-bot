@@ -39,12 +39,9 @@ After each interaction, the bot responds with a polite thank-you message and ack
 
 ## 🗂️ File Structure (on Glitch)
 
-├── server.js # Express server handling incoming webhook calls
-
-├── .env # Stores access tokens and verification secrets
-
-├── package.json # Project metadata and dependencies
-
+├── server.js # Express server handling incoming webhook calls  
+├── .env # Stores access tokens and verification secrets 
+├── package.json # Project metadata and dependencies 
 └── glitch.json # Glitch project config (optional)
 
 
