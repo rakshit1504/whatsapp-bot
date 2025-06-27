@@ -1,4 +1,4 @@
-# WhatsApp Cloud API – Education Info Chatbot
+# WhatsApp Cloud API – Education Info Chatbot  
 
 This project is a simple WhatsApp chatbot that collects basic education-related information using the Meta WhatsApp Cloud API. It was built as part of an assignment to explore webhook handling, template messaging, and API integration using Meta for Developers.
 
@@ -15,7 +15,6 @@ The bot initiates a short conversation with the user and asks:
 
 After each interaction, the bot responds with a polite thank-you message and acknowledges the input.
 
----
 
 ## 🔧 How It Works
 
@@ -27,7 +26,6 @@ After each interaction, the bot responds with a polite thank-you message and ack
   - Listening to incoming user interactions
   - Sending dynamic responses based on user's replies
 
----
 
 ## 💻 Tech Stack
 
@@ -65,7 +63,6 @@ To test this bot:
 - Expand conversation flow with more branches
 - Integrate with Dialogflow or a real NLP model
 
----
 
 ## ⚠️ Note
 
